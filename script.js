@@ -21,7 +21,7 @@ form.addEventListener('submit-input', (evt) => {
     }
 
     // Проверяем, что имя пользователя содержит только буквы и цифры
-    if (!isValidLogin(login)) {
+    if (!isValidLogin(username)) {
         alert('Login can only contain letters and numbers');
         return;
     }
@@ -39,7 +39,7 @@ form.addEventListener('submit-input', (evt) => {
     }
 
     // Проверяем, что пароли совпадают
-    if (password !== confirmPassword) {
+    if (password !== confirmpassword) {
         alert('Passwords mismatch');
         return;
     }
