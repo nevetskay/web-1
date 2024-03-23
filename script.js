@@ -38,7 +38,7 @@ form.addEventListener("submit", (evt) => {
 
 function isValidUsername(username) {
     const pattern = /^[a-zA-Z0-9]+$/;
-    return pattern.test(login);
+    return pattern.test(username);
 }
 
 function isValidPassword(password) {
