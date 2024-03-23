@@ -1,15 +1,16 @@
+
 const form = document.querySelector('.container');
-const loginInput = form.querySelector('.username');
+const usernameInput = form.querySelector('.username');
 const emailInput = form.querySelector('.email');
 const passwordInput = form.querySelector('.password');
-const confirmPasswordInput = form.querySelector('.confirmpassword');
+const confirmPasswordInput = form.querySelector('.passwordConfirm');
 
-form.addEventListener('submit-input', (evt) => {
+form.addEventListener('submit', (event) => {
     // Отменяем действие по умолчанию
-    evt.preventDefault();
+    event.preventDefault();
 
     // Получаем значения полей формы
-    const username = loginInput.value;
+    const username = usernameInput.value;
     const email = emailInput.value;
     const password = passwordInput.value;
     const confirmpassword = confirmPasswordInput.value;
@@ -21,7 +22,7 @@ form.addEventListener('submit-input', (evt) => {
     }
 
     // Проверяем, что имя пользователя содержит только буквы и цифры
-    if (!isValidLogin(username)) {
+    if (!isValidUsername(username)) {
         alert('Login can only contain letters and numbers');
         return;
     }
@@ -48,16 +49,16 @@ form.addEventListener('submit-input', (evt) => {
     form.submit();
 });
 
-function isValidLogin(login) {
+function isValidUsername(username) {
     // Проверка имени регулярным выражением
     const pattern = /^[a-zA-Z0-9]{3,20}$/;
-    return pattern.test(login);
+    return pattern.test(username);
 }
 
-function isValidEmail(login) {
+function isValidEmail(email) {
     // Проверка email регулярным выражением
     const pattern = /[a-z0-9]+@/;
-    return pattern.test(login);
+    return pattern.test(email);
 }
 function isValidPassword(password) {
     // Проверка пароля регулярным выражением
