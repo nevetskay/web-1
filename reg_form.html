@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <h1>REGISTRATION FORM</h1>
-        <form class="my-form">
+        <form class="my-form" action="/reg-data" method="post">
             <div class="form-input">
                 <label for="username">Username</label>
                 <input id="username" class="username" type="text" placeholder="Username" name="username" minlength="3" maxlength="20" required>
@@ -31,7 +31,7 @@
 
             <div class="sex">
                 <label for="sex1">Select your sex</label>
-                <select id="sex1" class="sex">
+                <select id="sex1" class="sex" name="gender">
                     <option value="None">None</option>
                     <option value="Male" class="male">Male</option>
                     <option value="Female" class="female">Female</option>
