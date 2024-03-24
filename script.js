@@ -3,7 +3,11 @@ const loginInput = form.querySelector(".username");
 const emailInput = form.querySelector(".email")
 const passwordInput = form.querySelector(".password");
 const confirmPasswordInput = form.querySelector(".confirm-password");
-
+const btn = document.querySelector('.btn-toggle');
+btn.addEventListener('click', function() {
+    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
+})
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
 
