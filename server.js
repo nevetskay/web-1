@@ -7,14 +7,14 @@ const port = 3000
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.static(__dirname))
-app.get('/', (req, res) =>{
-    res.sendFile("reg_form.html", {root: path.join(__dirname, )})
+app.get('*', (req, res) =>{
+    res.sendFile("reg_form.html", {root: path.join(__dirname)})
 })
-app.get('/', (req, res) =>{
-    res.sendFile("style.css", {root: path.join(__dirname, )})
+app.get('*', (req, res) =>{
+    res.sendFile("style.css", {root: path.join(__dirname)})
 })
-app.get('/', (req, res) =>{
-    res.sendFile("script.js", {root: path.join(__dirname, )})
+app.get('*', (req, res) =>{
+    res.sendFile("script.js", {root: path.join(__dirname)})
 })
 app.post('/reg-data', (req, res) =>{
     console.log(">>>>>>>>>>>>>>", req.body)
