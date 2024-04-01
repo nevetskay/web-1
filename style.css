@@ -1,12 +1,12 @@
 
 body.light-theme {
-    background-color: #ffffff;
+    background-color: #76913f;
     color: #000000;
 }
 
 body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #141414;
+    color: #76913f;
 }
 
 .container{
